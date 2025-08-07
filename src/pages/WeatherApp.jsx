@@ -47,7 +47,7 @@ function WeatherApp() {
         </button>
       </form>
 
-     { weatherData && <WeatherCard weatherData={weatherData} />}
+      {weatherData && <WeatherCard weatherData={weatherData} />}
     </div>
   );
 }
