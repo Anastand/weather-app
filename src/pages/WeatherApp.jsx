@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { weatherfetcher } from "../services/api";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+import WeatherCard from "../components/WeatherCard";
 
 function WeatherApp() {
   const [cityName, setCityName] = useState([]);
@@ -45,6 +46,8 @@ function WeatherApp() {
           Search
         </button>
       </form>
+
+     { weatherData && <WeatherCard weatherData={weatherData} />}
     </div>
   );
 }
