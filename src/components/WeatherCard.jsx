@@ -7,7 +7,7 @@ function WeatherCard({ weatherData }) {
   const iconCode = weatherData.weather[0].icon;
 
   return (
-    <div className="max-w-md mx-auto mt-4 bg-{#0A0B0B} rounded-lg shadow-md p-6 text-center space-y-4">
+    <div className="max-w-md mx-auto mt-4 bg-{#181818} rounded-lg shadow-lg p-6 text-center space-y-4">
       <img
         src={`https://openweathermap.org/img/wn/${iconCode}@2x.png`}
         alt={citySky}
