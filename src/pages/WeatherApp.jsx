@@ -30,7 +30,7 @@ function WeatherApp() {
   };
   return (
     <div>
-      <form>
+      {/* <form>
         <input
           type="text"
           value={searchCity}
@@ -42,6 +42,24 @@ function WeatherApp() {
           type="submit"
           className="p-2 border-2 border-blue-300 active:border-amber-200 active:text-gray-500"
           onClick={handelSearch}
+        >
+          Search
+        </button>
+      </form> */}
+      <form
+        onSubmit={handelSearch}
+        className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6"
+      >
+        <input
+          type="text"
+          value={searchCity}
+          onChange={(e) => setSearchCity(e.target.value)}
+          placeholder="Enter city name..."
+          className="w-72 p-3 rounded-lg bg-[#181818] text-white border border-gray-600 focus:outline-none focus:border-blue-500 transition"
+        />
+        <button
+          type="submit"
+          className="px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 transition text-white font-semibold"
         >
           Search
         </button>
